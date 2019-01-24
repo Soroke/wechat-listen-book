@@ -1,0 +1,135 @@
+/* pages/test/test.wxss */
+
+.operation-container{
+  height: 160rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.icon-prev{
+  /*background-image: url('../../assets/img/icon.png');
+  background-repeat: no-repeat;
+  background-position: -76px -153px;*/
+  width: 100rpx;
+  height: 100rpx;
+}
+.icon-play{
+  /*background-image: url('../../assets/img/icon.png');
+  background-repeat: no-repeat;
+  background-position: -136px -153px;*/
+  margin: 0 20rpx;
+  width: 118rpx;
+  height: 118rpx;
+}
+.icon-pause{
+  /*background-image: url('../../assets/img/icon.png');
+  background-repeat: no-repeat;
+  background-position: -178px -193px;*/
+  margin: 0 20rpx;
+  width: 118rpx;
+  height: 118rpx;
+}
+.icon-next{
+  /*background-image: url('../../assets/img/icon.png');
+  background-repeat: no-repeat;
+  background-position: -204px -154px;*/
+  width: 100rpx;
+  height: 100rpx;
+}
+.page-section{
+  margin-bottom: 20rpx;
+}
+.weui-article__section {
+  margin-bottom: 1.5em;
+}
+.picker{
+    padding: 13px;
+    background-color: #FFFFFF;
+}
+.dqbf{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.sousuo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.picker{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.section__title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.page-body-info {
+  padding-bottom: 50rpx;
+  
+}
+.time-big {
+  font-size: 60rpx;
+  margin: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.slider {
+  padding: 0 25px;
+}
+.play-time {
+  font-size: 28rpx;
+  width: 650rpx;
+  margin-left:55rpx;
+  padding: 20rpx 0;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+
+/*悬浮窗口*/
+.bg{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  bottom: 150rpx;
+  right: 60rpx;
+  position: fixed;
+  background-color: rgba(88, 86, 86, 0.897);
+}
+.a{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  bottom: 165rpx;
+  right: 75rpx;
+  position: fixed;
+}
+.b{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  bottom: 165rpx;
+  right: 75rpx;
+  position: fixed;
+  background-color: rgba(104, 90, 88, 0.466);
+}
+.listening-bg{
+  width: 60rpx;
+  height: 60rpx;
+  position: fixed;
+  bottom: 185rpx;
+  right: 95rpx;
+}

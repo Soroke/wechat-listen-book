@@ -1,0 +1,43 @@
+<!--pages/bookinfo/bookinfo.wxml-->
+<view class="header-container">
+      <image class='header-bg' src = '{{bookPhoto}}'></image>
+      <!--第二层层：灰色蒙层-->
+      <view class="bg-gray"></view>
+      <view class='userContent'>
+        <image bindtap='changePhotoImg' class="header-avatar" src="{{bookPhoto}}" ></image>
+        <view class='header-userInfo'>
+            <text class="header-nickname">{{bookName}}</text>
+            <text class="header-text">作者：{{makeName}}</text>
+            <text class="header-text">主播：{{hostName}}</text>
+            <text class="header-text">分类：{{typeId}}</text>
+            <text class="header-text">播放：{{playNum}}</text>
+        </view>
+      </view>
+</view>
+
+<!--列表-->
+<view class='audiolist'>
+  <view class="hotBooks">
+    <view class="hotBooks-lists">
+        <block wx:for="{{playlist}}" class="choice-menu__block" wx:for-item="item" wx:key="*this" wx:for-index="idx">
+          <navigator class="guess-images-warp" url="../playing/playing?bookid={{bookID}}&booktype={{bookType}}&index={{item.epis}}&bookPhoto={{bookPhoto}}&hostName={{hostName}}&bookName={{bookName}}&audioname={{item.zname}}&audiotime={{item.timesize}}">
+          <view class="item">
+            <view class="hotBooks-left__image">
+              <view class="hotBooks__title" style="width: 60rpx;height: 120rpx;padding: 0 0 0 60rpx;">{{idx + 1}}</view>
+            </view>
+            <view class="hotBooks-right">
+              <view class="hotBooks__title" style="color:#333;">{{item.zname}}</view>
+            </view>
+          </view>
+          </navigator>
+        </block>
+    </view>
+  </view>
+</view>
+
+<!-- 悬浮播放窗口 -->
+<view class='suspension {{showview?"show":"hide"}}' bindtap='playpage'>
+    <image class='suspension-image {{playstatus === true ? "rotate-360" : "rotate-360-paused"}}' src='{{playbookphoto}}'></image>
+    <view class='suspension-gray {{playstatus?"show":"hide"}}'></view>
+    <image class='listening-bg {{playstatus?"show":"hide"}}' src='../images/player/耳机.png'></image>
+</view>

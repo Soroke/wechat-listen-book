@@ -1,0 +1,125 @@
+/* pages/bookinfo/bookinfo.wxss */
+
+
+
+/* 头部 */
+.header-container {
+  display: flex;
+  flex-direction: row;
+  height: 350rpx;
+  width: 100%;
+  background-color: #fff;
+  align-items: center;
+  position: relative;
+}
+
+.header-bg{
+  width: 100%;
+  height: 100%;
+  filter: blur(50rpx);
+  /*transform: scale(1.2);*/
+  overflow:hidden
+}
+
+/*灰色蒙层*/
+.bg-gray{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(19, 19, 19, 0.39);
+}
+
+/* 名称和头像 */
+.userContent{
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.header-avatar {
+  background-color: #fff;
+  width: 250rpx;
+  height: 250rpx;
+  margin: 0 50rpx;
+  border-radius: 5%;
+}
+
+.header-nickname {
+  color: #fff;
+  font-size: 40rpx;
+  margin: 10 20rpx;
+  
+}
+.header-text{
+  color:rgb(202, 202, 202); font-size: 0.8em;
+  margin: 10 20rpx;
+  padding: 0 0 10rpx 0;
+}
+.header-userInfo{
+  margin-top: 100rpx;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  
+}
+
+
+/** 书籍列表样式 **/
+.hotBooks{background-color: #fff; display: block; padding: 0 20rpx; margin-top: 15rpx;}
+.hotBooks-lists{overflow: hidden;}
+.hotBooks-lists .item{display: flex; justify-content: flex-start; font-size: 1.1em; padding: 0 0 10rpx 0;}
+.hotBooks-lists .hotBooks-left__image{float: left;border-radius: 4rpx;padding: 30rpx 0 0 0;color:rgb(187, 185, 185);}
+.hotBooks-lists .item .hotBooks-right{margin-left:25rpx; padding: 30rpx 0 10rpx 0; width: 80%; border-bottom:1rpx solid #eaeaea; overflow: hidden; white-space: nowrap; text-overflow:ellipsis;}
+.hotBooks-right .hotBooks__title,
+.hotBooks-right .hotBooksF{overflow: hidden; white-space: nowrap; text-overflow:ellipsis;}
+.hotBooks-right .detailS{color:#999; font-size: 0.8em; display: flex; justify-content: flex-start; align-self: center; margin-top: 10rpx;}
+.hotBooks-right .detailS text{margin:0 30rpx 0 10rpx;}
+.play-icon{width: 27rpx; height: 27rpx;}
+
+/*悬浮窗口*/
+.suspension{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  bottom: 150rpx;
+  right: 60rpx;
+  position: fixed;
+  background-color: rgba(105, 105, 105, 0.678);
+}
+.suspension-image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  bottom: 165rpx;
+  right: 75rpx;
+  position: fixed;
+}
+.suspension-gray{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  bottom: 165rpx;
+  right: 75rpx;
+  position: fixed;
+  background-color: rgba(143, 143, 143, 0.349);
+}
+.listening-bg{
+  width: 60rpx;
+  height: 60rpx;
+  position: fixed;
+  bottom: 185rpx;
+  right: 95rpx;
+}
+/*悬浮窗口的隐藏和显示*/
+.hide{
+ display: none;
+}
+.show{ 
+ display: block;
+}

@@ -1,0 +1,87 @@
+<!--pages/playing/playing.wxml-->
+<view class="page">
+  <view class="page__bd">
+    <view class="page__bd-img">
+      <view class="title">{{bookinfo.audioname}}</view>
+      <view class="titleImg">
+        <!--旋转图-->
+        <view class="rotate-disk-container">
+          <view class="rotate-disk {{pauseStatus === false ? 'rotate-360' : 'rotate-360-paused'}}">
+            <image class="poster" src="{{bookinfo.bookPhoto}}"></image>
+          </view>
+        </view>
+      </view>
+      <view class="skip-time" bindtap="setskiptime">
+        <image src="../images/classify/timer.png" style="padding:0 20rpx;width: 40rpx;height: 40rpx;"></image>
+        <text>片头跳过{{spiktime}}秒</text>
+      </view>
+      <view class="progress">
+        <slider class="slider" min="0" max="{{bookinfo.audiotime}}" value="{{audioNowTime}}" bindchange="seek"></slider>
+
+        <view class="progress-schedule"><text>{{formatAudioNowTime}}</text></view>
+        <view class="progress-end"><text>{{formatAudioTime}}</text></view>
+      </view>
+      <view class="video-control">
+        <view class="video-list" bindtap='showModal'>
+          <image src="../images/player/列表.png"></image>
+          <text>播放列表</text>
+        </view>
+        <view class="video-toggle">
+          <image src="../images/player/left_vedio2.png" class="video-prev" bindtap="bindTapPrev"></image>
+          <view class="video-circle">
+            <image src="{{pauseStatus === true ? '../images/player/播放.png' : '../images/player/暂停.png'}}" bindtap="bindTapPlay"></image>
+          </view>
+          <image src="../images/player/right_vedio2.png" class="video-next" bindtap="bindTapNext"></image>
+        </view>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="video-timer">
+            <image src="../images/player/闹钟.png"></image>
+            <text>定时开关</text>
+          </view>
+        </picker>
+      </view>
+      <view class="example">
+        <image src="{{bookinfo.bookPhoto}}"></image>
+        <view class="example-title">
+          <text class="example-title-mian">{{bookinfo.bookName}}</text>
+          <text class="example-title-detail">播讲：{{bookinfo.hostName}}</text>
+        </view>
+        <view class="example-right">
+          <text>➕ 点我收藏</text>
+        </view>
+      </view>
+    </view>
+     
+  </view>
+</view>
+
+<!--设置片头跳过时间弹出框  -->
+    <modal hidden="{{hiddenmodalput}}" title="设置片头跳过时长" confirm-text="提交" cancel-text="取消" bindcancel="cancelM" bindconfirm="confirmM">
+      <input type="number" bindinput='spikTime' placeholder="请输入片头跳过多少秒"/>
+    </modal>
+
+
+<!--播放列表弹出层  -->
+<view class="modals modals-bottom-dialog" hidden="{{hideModal}}" catchtouchmove="true">
+  <!--弹出框  -->
+    <view class="modals-cancel" bindtap="hideModal"></view>
+    <view class="bottom-dialog-body bottom-pos" animation="{{animationData}}">
+    <scroll-view scroll-y="true" style="height: 260px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" enable-back-to-top='true' scroll-into-view="{{toView}}">
+        <!--列表-->
+        <view class='audiolist'>
+          <view class="hotBooks">
+            <view class="hotBooks-lists">
+                <block wx:for="{{audiolist}}" class="choice-menu__block" wx:for-item="item" wx:key="*this" wx:for-index="idx">
+
+                  <view class="item" bindtap="newchange" data-index-Epis='{{item.epis}}' data-index-Name='{{item.zname}}' data-index-Time='{{item.timesize}}' id='list-{{idx}}'>
+                    <view class="hotBooks-right">
+                      <view class="hotBooks__title" style="color:#333;">{{bookinfo.bookName}}--{{item.zname}}</view>
+                    </view>
+                  </view>
+                </block>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+</view>

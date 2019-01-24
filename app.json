@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/test/test",
+    "pages/playing/playing",
+    "pages/bookinfo/bookinfo",
+    "pages/search/search",
+    "pages/booklist/booklist",
+    "pages/classify/classify",
+    "pages/me/me"
+  ],
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "听书吧",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#444444",
+    "selectedColor": "#ff5721",
+    "backgroundColor": "#fff",
+    "borderStyle": "#fff",
+    "list": [
+      {
+        "selectedIconPath": "pages/images/tabBar/starSelect.png",
+        "iconPath": "pages/images/tabBar/starBlur.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "pages/images/tabBar/findSelect.png",
+        "iconPath": "pages/images/tabBar/findBlur.png",
+        "pagePath": "pages/classify/classify",
+        "text": "分类"
+      },
+      {
+        "selectedIconPath": "pages/images/tabBar/loginSelect.png",
+        "iconPath": "pages/images/tabBar/loginBlur.png",
+        "pagePath": "pages/me/me",
+        "text": "我的"
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+<!--pages/test/test.wxml-->
+<view class='bg' bindtap='tab'>
+<image class='a rotate-360' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1545198146897&di=05789f1ce3b247177233f8cd180a416b&imgtype=0&src=http%3A%2F%2Fwww.woaitingshu.com%2Fpic%2Fimages%2F2016-7%2F20167417362152645.jpg'></image>
+<view class='b'></view>
+<image class='listening-bg' src='../images/player/耳机.png'></image>
+</view>
+
+    <view class="page-body-info">
+      <text class="time-big">{{formatedPlayTime}}</text>
+      <slider class="slider" min="0" max="{{audioDuration}}" value="{{audioTime}}" bindchange="seek"></slider>
+        <view class="play-time">
+          <text>00:00</text>
+          <text>{{times}}</text>
+        </view>
+    </view>
+
+
+
+
+
+    <view class="operation-container">
+      <image src="../../image/left.png" class="icon-prev" bindtap="bindTapPrev"></image>
+      <image
+        src="{{pauseStatus === false ? '../../image/pause.png' : '../../image/play.png'}}"
+        class="icon-play" bindtap="bindTapPlay"></image>
+      <image src="../../image/next.png" class="icon-next" bindtap="bindTapNext"></image>
+    </view>
+
+
+<text class="dqbf">当前播放：修真界败类第{{audioindex}}章</text>
+<text>\n\n\n</text>
+<view class='sousuo'>
+<view class="df search_arr">
+  <icon class="searchcion" size='20' type='search' value="{{search}}" bindtap='Search'></icon>
+  <input class="searchdo" bindconfirm="search" placeholder="输入需要跳转到的集数" bindinput="input"/>
+</view>
+</view>
+<text>\n\n\n</text>
+<view class="section">
+  <view class="section__title">选择定时关闭，几集后关闭播放</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      当前选择：{{array[index]}}
+    </view>
+  </picker>
+</view>

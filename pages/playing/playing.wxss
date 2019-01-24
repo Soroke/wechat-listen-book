@@ -1,0 +1,295 @@
+/* pages/playing/playing.wxss */
+.page {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding:0 20rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+/*
+  * 主体部分
+  *
+*/
+.page__bd-img {
+  position: relative;
+}
+.page__bd .title {
+  text-align: center;
+  font-size: 19px;
+  font-weight: 600;
+  margin: 10rpx 0;
+}
+.titleImg {
+  width: 680rpx;
+  height: 680rpx;
+  border-radius: 15rpx;
+  display: block;
+  margin:0 auto;
+}
+.titleImg-warp {
+  position: absolute;
+   width:110rpx; 
+  height:40rpx;
+  top:657rpx;
+  right:95rpx;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.titleImg-warp .titleImg-num {
+  width: 35rpx;
+  height: 35rpx;
+}
+.titleImg-warp text {
+  font-size: 0.55rem;
+  color:#fff;
+  padding:0 0 0 10rpx;
+}
+.icon-pop {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+.icon-pop image {
+  width: 45rpx;
+  height: 45rpx;
+  background-color: #e3e4e5;
+  border-radius: 5rpx;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+  margin: 10rpx 0  0 20rpx;
+}
+/**
+*跳过时长
+*/
+.skip-time{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 40rpx;
+}
+.skip-time text{
+  padding:5rpx 0;
+  font-size: 0.7rem;
+  color:#bebebe;
+  text-align: center;
+}
+/*
+  * progress
+*/
+.progress{
+  display: block;
+  position: relative;
+  padding:30rpx 30rpx;
+}
+.progress .progress-line {
+  width: 100%;
+  height: 4rpx;
+  background-color: #ccc;
+}
+.progress .progress-onload {
+  width: 22.68%;
+  top:20rpx;
+  height:4rpx;
+  position: absolute;
+  background-color: #F86440;
+  transition: all 0.3s ease;
+}
+.progress .progress-control {
+  width: 29rpx;
+  height: 29rpx;
+  position: relative;
+  top:-15rpx;
+  left: 0rpx;
+  transform: all 0.3s ease;
+  background-color: #F86440;
+  border-radius: 50%;
+}
+.progress .progress-schedule,
+.progress .progress-end{
+  font-size: 0.7rem;
+  color:#F86440;
+}
+.progress .progress-schedule {
+  float: left;
+}
+.progress .progress-end {
+  float: right;
+}
+/*
+  * 播放器控制
+  *
+*/
+.video-control {
+  width: 100%;
+  display: block;
+  height:123rpx;
+  margin-top:10rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.video-control .video-list,
+.video-control .video-timer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 120rpx;
+}
+.video-control .video-list text,
+.video-control .video-timer text {
+  font-size: 0.5rem;
+  color:#bebebe;
+  text-align: center;
+}
+.video-control .video-list image,
+.video-control .video-timer image{
+  width: 45rpx;
+  height: 45rpx;
+  margin: 5rpx auto;
+}
+.video-control .video-toggle {
+  width:350rpx;
+  height:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.video-control .video-toggle .video-prev,
+.video-control .video-toggle .video-next{
+  width: 45rpx;
+  height: 45rpx;
+}
+.video-control .video-circle{
+  width: 112rpx;
+  height: 112rpx;
+  border-radius: 50%;
+  background-color: #f97363;
+}
+.video-control .video-circle image {
+  width:60rpx;
+  height:60rpx;
+  position:relative;
+  left:30rpx;
+  top:25rpx;
+  
+}
+.videoCircieImageLeft {
+  left:26rx;
+}
+/*
+  * 订阅专辑
+*/
+.example {
+  width: 100%;
+  height: 124rpx;
+  display: block;
+  display: inline-block;
+  border-bottom: 1rpx solid #f8f8f8;
+}
+.example image {
+  width: 90rpx;
+  height: 90rpx;
+  margin:17rpx 10rpx 0 0;
+  background-color: #000;
+  border-radius: 10rpx;
+}
+.example .example-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: inline-block;
+}
+.example .example-title text{
+  display: block;
+}
+.example .example-title .example-title-detail {
+  font-size: 0.7rem;
+  color:#383838;
+}
+.example .example-title .example-title-main {
+  font-size: 0.9rem;
+  color:#999;
+}
+.example .example-right {
+  float: right;
+  border-radius: 60rpx;
+  background-color: #ffece8;
+  font-size:0.7rem;
+  padding:10rpx 15rpx;
+  text-align: center;
+  margin:30rpx 10rpx 0 0;
+  color: #f86440;
+}
+
+
+
+
+
+.rotate-disk-container{
+  position: absolute;
+  top: 0;
+  height: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.rotate-disk{
+  width: 570rpx;
+  height: 570rpx;
+  border-radius: 570rpx;
+  overflow: hidden;
+  border: 20rpx solid rgba(54, 43, 41, 0.2);
+}
+.poster{
+  width: 570rpx;
+  height: 570rpx;
+}
+.rotate-360{
+  animation: rotate 10s linear infinite;
+}
+.rotate-360-paused{
+  animation: rotate 10s linear infinite;
+  animation-play-state: paused;
+}
+@keyframes rotate
+{
+  0%   {transform: rotate(0deg);}
+  50% {transform: rotate(180deg);}
+  100% {transform: rotate(360deg);}
+}
+
+
+/** 测试弹出层 **/
+/*模态框*/
+.modals{position:fixed; z-index: 999; top:0; left: 0; right:0; bottom: 0;}
+.modals-cancel{position:absolute; z-index:1000; top:0; left: 0; right:0; bottom: 0;text-align: center; background-color: rgba(0,0,0,.5);}
+.bottom-dialog-body{position:absolute; z-index:10001; bottom:0; left:0; right:0; padding:30rpx; height:500rpx; background-color: #fff;}
+/*动画前初始位置*/
+.bottom-pos{-webkit-transform:translateY(100%);transform:translateY(100%);}
+
+
+/** 书籍列表样式 **/
+.hotBooks{background-color: #fff; display: block; padding: 0 20rpx; margin-top: 15rpx;}
+.hotBooks-lists{overflow: hidden;}
+.hotBooks-lists .item{display: flex; justify-content: flex-start; font-size: 1.1em; padding: 0 0 10rpx 0;}
+.hotBooks-lists .hotBooks-left__image{float: left;border-radius: 4rpx;padding: 0rpx 0 0 0;color:rgb(187, 185, 185);}
+.hotBooks-lists .item .hotBooks-right{margin-left:25rpx; padding: 0rpx 0 10rpx 0; width: 80%; border-bottom:1rpx solid #eaeaea; overflow: hidden; white-space: nowrap; text-overflow:ellipsis;}
+.hotBooks-right .hotBooks__title,
+.hotBooks-right .hotBooksF{overflow: hidden; white-space: nowrap; text-overflow:ellipsis;margin-bottom:8rpx;margin-top: 8rpx;font-size: 0.7em;}
+.hotBooks-right .detailS{color:#999; font-size: 0.8em; display: flex; justify-content: flex-start; align-self: center; margin-top: 10rpx;}
+.hotBooks-right .detailS text{margin:0 30rpx 0 10rpx;}
+.play-icon{width: 27rpx; height: 27rpx;}

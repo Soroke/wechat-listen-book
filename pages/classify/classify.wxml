@@ -1,0 +1,39 @@
+<!--pages/classify/classify.wxml-->
+<view class='page'>
+  <view class='search'>
+      <view class='searchItem'>
+          <image src='../images/listen/search.png' />
+          <input placeholder='搜书 | 搜小说 | 搜评书' bindconfirm="searchbook" focus='true'></input>
+      </view>
+  </view>
+
+  <view class="hotBooks">
+    <view class="hotBooks-lists">
+        <block wx:for="{{bookinfo}}" class="choice-menu__block" wx:for-item="item" wx:key="*this">
+          <navigator class="guess-images-warp" url="../bookinfo/bookinfo?bookid={{item.bookID}}&booktype={{item.bookType}}">
+            <view class="item">
+              <view class="hotBooks-left__image">
+                <image src="{{item.bookPhoto}}" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+              </view>
+              <view class="hotBooks-right">
+                <view class="hotBooks__title" style="color:#333;">{{item.bookName}}</view>
+                <view class="hotBooksF" style="color:#999;">{{item.intro}}</view>
+                <view class="detailS">
+                  <image src="../images/recommend/播放.png" class="play-icon"></image>
+                  <text>{{item.playNum}}</text>
+                  <image src="../images/tabBar/loginBlur.png" class="play-icon"></image>
+                  <text>{{item.hostName}}</text>
+                </view>
+              </view>
+            </view>
+          </navigator>
+        </block>
+    </view>
+  </view>
+  <!-- 悬浮播放窗口 -->
+  <view class='suspension {{showview?"show":"hide"}}' bindtap='playpage'>
+      <image class='suspension-image {{playstatus === true ? "rotate-360" : "rotate-360-paused"}}' src='{{playbookphoto}}'></image>
+      <view class='suspension-gray {{playstatus?"show":"hide"}}'></view>
+      <image class='listening-bg {{playstatus?"show":"hide"}}' src='../images/player/耳机.png'></image>
+  </view>
+</view>

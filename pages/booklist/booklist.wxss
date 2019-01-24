@@ -1,0 +1,61 @@
+/* pages/booklist/booklist.wxss */
+page{
+  background-color: #f8f8f8; 
+  font-size: 27rpx; 
+}
+
+/** 书籍列表样式 **/
+.hotBooks{background-color: #fff; display: block; padding: 0 20rpx; margin-top: 15rpx;}
+.hotBooks-lists{overflow: hidden;}
+.hotBooks-lists .item{display: flex; justify-content: flex-start; font-size: 1.1em; padding: 25rpx 0 25rpx 0;}
+.hotBooks-lists .hotBooks-left__image{float: left;  border-radius: 4rpx;}
+.hotBooks-lists .item .hotBooks-right{margin-left:25rpx; padding: 0 0 10rpx 0; width: 80%; border-bottom:1rpx solid #eaeaea; overflow: hidden; white-space: nowrap; text-overflow:ellipsis;}
+.hotBooks-right .hotBooks__title,
+.hotBooks-right .hotBooksF{overflow: hidden; white-space: nowrap; text-overflow:ellipsis;}
+.hotBooks-right .detailS{color:#999; font-size: 0.8em; display: flex; justify-content: flex-start; align-self: center; margin-top: 10rpx;}
+.hotBooks-right .detailS text{margin:0 30rpx 0 10rpx;}
+.play-icon{width: 27rpx; height: 27rpx;}
+
+
+
+/*悬浮窗口*/
+.suspension{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  bottom: 150rpx;
+  right: 60rpx;
+  position: fixed;
+  background-color: rgba(105, 105, 105, 0.678);
+}
+.suspension-image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  bottom: 165rpx;
+  right: 75rpx;
+  position: fixed;
+}
+.suspension-gray{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  bottom: 165rpx;
+  right: 75rpx;
+  position: fixed;
+  background-color: rgba(143, 143, 143, 0.349);
+}
+.listening-bg{
+  width: 60rpx;
+  height: 60rpx;
+  position: fixed;
+  bottom: 185rpx;
+  right: 95rpx;
+}
+/*悬浮窗口的隐藏和显示*/
+.hide{
+ display: none;
+}
+.show{ 
+ display: block;
+}
